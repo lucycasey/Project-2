@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
 // import 'bulma'
 import './styles/style.scss'
@@ -12,7 +12,7 @@ import SingleEvent from './components/SingleEvent'
 import About from './components/About'
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Navbar />
     <Switch>
       <Route exact path="/" component={Home} />
@@ -20,7 +20,7 @@ const App = () => (
       <Route path="/events" component={Events} />
       <Route path="/about" component={About} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 ReactDOM.render(
